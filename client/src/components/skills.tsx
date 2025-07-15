@@ -14,27 +14,26 @@ export default function Skills() {
       title: "Frontend",
       icon: <Globe size={24} />,
       skills: [
-        { name: "React", percentage: 90, icon: "⚛️" },
-        { name: "JavaScript", percentage: 85, icon: "🟨" },
-        { name: "HTML/CSS", percentage: 95, icon: "🎨" },
+        { name: "React", percentage: 70, icon: "⚛️" },
+        { name: "JavaScript", percentage: 60, icon: "🟨" },
+        { name: "HTML/CSS", percentage: 80, icon: "🎨" },
       ]
     },
     {
       title: "Backend",
       icon: <Server size={24} />,
       skills: [
-        { name: "Node.js", percentage: 80, icon: "🟢" },
-        { name: "Python", percentage: 88, icon: "🐍" },
-        { name: "Express.js", percentage: 75, icon: "⚡" },
+        { name: "Python", percentage: 55, icon: "🐍" },
+        { name: "PHP", percentage: 30, icon: "🐘" },
       ]
     },
     {
       title: "Database & Tools",
       icon: <Database size={24} />,
       skills: [
-        { name: "MongoDB", percentage: 82, icon: "🍃" },
+        { name: "Scrapy", percentage: 30, icon: "🕷️" },
+        { name: "MongoDB", percentage: 30, icon: "🍃" },
         { name: "Git", percentage: 78, icon: "🔧" },
-        { name: "Scrapy", percentage: 85, icon: "🕷️" },
       ]
     }
   ];

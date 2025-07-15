@@ -47,10 +47,9 @@ export default function Contact() {
   };
 
   const socialLinks = [
-    { icon: <Github size={20} />, href: "#", label: "GitHub" },
-    { icon: <Facebook size={20} />, href: "#", label: "Facebook" },
-    { icon: <Linkedin size={20} />, href: "#", label: "LinkedIn" },
-    { icon: <Twitter size={20} />, href: "#", label: "Twitter" },
+    { icon: <Github size={20} />, href: "https://github.com/Zephy88r", label: "GitHub" },
+    { icon: <Facebook size={20} />, href: "https://www.facebook.com/ankit.acharya.872/", label: "Facebook" },
+    { icon: <Linkedin size={20} />, href: "https://www.linkedin.com/in/ankit-acharya-1bb826322/", label: "LinkedIn" },
   ];
 
   return (
@@ -85,7 +84,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="font-semibold">Email</h4>
-                      <p className="text-muted-foreground">ankit.acharya@example.com</p>
+                      <p className="text-muted-foreground">ankitacharya872@gmail.com</p>
                     </div>
                   </div>
                   
@@ -118,6 +117,8 @@ export default function Contact() {
                       <motion.a
                         key={link.label}
                         href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center text-accent hover:bg-accent hover:text-white transition-all duration-300"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
@@ -129,80 +130,22 @@ export default function Contact() {
                 </div>
               </motion.div>
 
-              {/* Contact Form */}
+              {/* Contact Button */}
               <motion.div
-                className="bg-secondary/80 rounded-xl p-8"
+                className="bg-secondary/80 rounded-xl p-8 flex flex-col items-center justify-center"
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
               >
                 <h3 className="text-xl font-semibold mb-6 text-accent">Send a Message</h3>
-                
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Name</label>
-                    <Input
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="bg-secondary border-gray-600 focus:border-accent"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Email</label>
-                    <Input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="bg-secondary border-gray-600 focus:border-accent"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Subject</label>
-                    <Input
-                      type="text"
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleChange}
-                      required
-                      className="bg-secondary border-gray-600 focus:border-accent"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Message</label>
-                    <Textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      rows={5}
-                      required
-                      className="bg-secondary border-gray-600 focus:border-accent resize-none"
-                    />
-                  </div>
-                  
-                  <Button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-accent to-purple-500 text-white hover:shadow-lg hover:shadow-accent/25 transition-all duration-300 transform hover:scale-105"
-                  >
-                    {isSubmitting ? (
-                      "Sending..."
-                    ) : (
-                      <>
-                        <Send size={16} className="mr-2" />
-                        Send Message
-                      </>
-                    )}
-                  </Button>
-                </form>
+                <a
+                  href="mailto:ankitacharya872@gmail.com"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-accent to-purple-500 text-white rounded-lg hover:shadow-lg hover:shadow-accent/25 transition-all duration-300 transform hover:scale-105"
+                >
+                  <Send size={16} className="mr-2" />
+                  Send Email
+                </a>
               </motion.div>
             </div>
           </div>

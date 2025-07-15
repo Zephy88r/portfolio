@@ -26,10 +26,14 @@ export default function About() {
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                {/* Profile image placeholder */}
+                {/* Profile image */}
                 <div className="w-80 h-80 mx-auto rounded-full bg-gradient-to-br from-accent to-purple-500 p-1">
-                  <div className="w-full h-full rounded-full bg-secondary flex items-center justify-center">
-                    <User size={96} className="text-accent" />
+                  <div className="w-full h-full rounded-full overflow-hidden">
+                    <img 
+                      src="/images/175-removebg-preview.png"
+                      alt="Ankit Acharya"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
               </motion.div>

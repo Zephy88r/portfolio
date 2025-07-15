@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ShoppingCart, Cloud, Bot, ExternalLink, Github } from "lucide-react";
+import { ShoppingCart, Cloud, Bot, Github } from "lucide-react";
 
 export default function Projects() {
   const projects = [
@@ -9,7 +9,6 @@ export default function Projects() {
       icon: <ShoppingCart size={48} />,
       gradient: "from-accent to-purple-500",
       tags: ["React", "Node.js", "MongoDB", "Express.js"],
-      demoLink: "#",
       githubLink: "#"
     },
     {
@@ -18,7 +17,6 @@ export default function Projects() {
       icon: <Cloud size={48} />,
       gradient: "from-blue-400 to-cyan-500",
       tags: ["React", "API Integration", "CSS3"],
-      demoLink: "#",
       githubLink: "#"
     },
     {
@@ -27,7 +25,6 @@ export default function Projects() {
       icon: <Bot size={48} />,
       gradient: "from-purple-500 to-pink-500",
       tags: ["Python", "OpenCV", "Speech Recognition", "ML"],
-      demoLink: "#",
       githubLink: "#"
     }
   ];
@@ -81,13 +78,6 @@ export default function Projects() {
                 </div>
                 
                 <div className="flex gap-4">
-                  <a
-                    href={project.demoLink}
-                    className="text-accent hover:text-purple-400 transition-colors flex items-center gap-2"
-                  >
-                    <ExternalLink size={16} />
-                    Live Demo
-                  </a>
                   <a
                     href={project.githubLink}
                     className="text-accent hover:text-purple-400 transition-colors flex items-center gap-2"
